@@ -1,0 +1,121 @@
+object frmPadrao: TfrmPadrao
+  Left = 0
+  Top = 0
+  Caption = 'frmPadrao'
+  ClientHeight = 374
+  ClientWidth = 652
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  Visible = True
+  PixelsPerInch = 96
+  TextHeight = 13
+  object frmbotoes: TPanel
+    Left = 0
+    Top = 297
+    Width = 652
+    Height = 77
+    Align = alBottom
+    TabOrder = 0
+    ExplicitTop = 184
+    ExplicitWidth = 527
+    object btnAdd: TBitBtn
+      Left = 0
+      Top = 8
+      Width = 60
+      Height = 70
+      Caption = 'Adicionar'
+      Layout = blGlyphTop
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+      OnClick = btnAddClick
+    end
+    object btnEdit: TBitBtn
+      Left = 89
+      Top = 7
+      Width = 60
+      Height = 70
+      Caption = 'Alterar'
+      Layout = blGlyphTop
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+    end
+    object btnExcluir: TBitBtn
+      Left = 178
+      Top = 7
+      Width = 60
+      Height = 70
+      Caption = 'Excluir'
+      Layout = blGlyphTop
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
+    end
+    object btnSave: TBitBtn
+      Left = 267
+      Top = 7
+      Width = 60
+      Height = 70
+      Caption = 'Salvar'
+      Layout = blGlyphTop
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 3
+    end
+    object btnCancel: TBitBtn
+      Left = 348
+      Top = 7
+      Width = 60
+      Height = 70
+      Caption = 'Cancelar'
+      Layout = blGlyphTop
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 4
+    end
+    object btnSearch: TBitBtn
+      Left = 430
+      Top = 7
+      Width = 60
+      Height = 70
+      Caption = 'Pesquisar'
+      Layout = blGlyphTop
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 5
+    end
+    object btnClose: TBitBtn
+      Left = 592
+      Top = 7
+      Width = 60
+      Height = 70
+      Caption = 'Fechar'
+      Layout = blGlyphTop
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 6
+    end
+    object BitBtn8: TBitBtn
+      Left = 512
+      Top = 7
+      Width = 60
+      Height = 70
+      Caption = 'Selecionar'
+      Layout = blGlyphTop
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 7
+    end
+  end
+  object dts: TDataSource
+    Left = 624
+  end
+end

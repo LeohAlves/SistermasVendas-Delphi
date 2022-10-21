@@ -1,0 +1,41 @@
+unit untPadrao;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls,
+  Data.DB;
+
+type
+  TfrmPadrao = class(TForm)
+    frmbotoes: TPanel;
+    btnAdd: TBitBtn;
+    btnEdit: TBitBtn;
+    btnExcluir: TBitBtn;
+    btnSave: TBitBtn;
+    btnCancel: TBitBtn;
+    btnSearch: TBitBtn;
+    btnClose: TBitBtn;
+    BitBtn8: TBitBtn;
+    dts: TDataSource;
+    procedure btnAddClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPadrao: TfrmPadrao;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmPadrao.btnAddClick(Sender: TObject);
+begin
+    dts.DataSet.Append;
+end;
+
+end.
