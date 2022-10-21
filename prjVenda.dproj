@@ -106,6 +106,11 @@
             <Form>frmPadrao</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="untDtModel.pas">
+            <Form>Modulo</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
