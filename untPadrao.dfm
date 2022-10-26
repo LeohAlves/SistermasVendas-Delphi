@@ -2,8 +2,8 @@ object frmPadrao: TfrmPadrao
   Left = 0
   Top = 0
   Caption = 'frmPadrao'
-  ClientHeight = 374
-  ClientWidth = 652
+  ClientHeight = 536
+  ClientWidth = 824
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,17 +14,18 @@ object frmPadrao: TfrmPadrao
   OldCreateOrder = False
   Position = poMainFormCenter
   Visible = True
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object frmbotoes: TPanel
     Left = 0
-    Top = 297
-    Width = 652
-    Height = 77
+    Top = 458
+    Width = 824
+    Height = 78
     Align = alBottom
     TabOrder = 0
-    ExplicitLeft = 8
-    ExplicitTop = 289
+    ExplicitLeft = 56
+    ExplicitTop = -46
     object btnAdd: TBitBtn
       Left = 0
       Top = 8
@@ -771,8 +772,8 @@ object frmPadrao: TfrmPadrao
       TabOrder = 5
     end
     object btnClose: TBitBtn
-      Left = 592
-      Top = 7
+      Left = 708
+      Top = 6
       Width = 60
       Height = 70
       Caption = 'Fechar'
@@ -1017,6 +1018,30 @@ object frmPadrao: TfrmPadrao
       ShowHint = True
       TabOrder = 7
     end
+  end
+  object dbg: TDBGrid
+    Left = 0
+    Top = 0
+    Width = 824
+    Height = 81
+    Align = alTop
+    DataSource = dts
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 81
+    Width = 824
+    Height = 377
+    Align = alClient
+    TabOrder = 2
+    ExplicitLeft = 56
+    ExplicitTop = -423
   end
   object dts: TDataSource
     Left = 624

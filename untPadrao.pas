@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls,
-  Data.DB;
+  Data.DB, Vcl.Grids, Vcl.DBGrids;
 
 type
   TfrmPadrao = class(TForm)
@@ -19,12 +19,15 @@ type
     btnClose: TBitBtn;
     btnSelecionar: TBitBtn;
     dts: TDataSource;
+    dbg: TDBGrid;
+    Panel1: TPanel;
     procedure btnAddClick(Sender: TObject);
     procedure btnEditClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
     procedure btnSaveClick(Sender: TObject);
     procedure btnCancelClick(Sender: TObject);
     procedure btnCloseClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -73,6 +76,11 @@ procedure TfrmPadrao.btnSaveClick(Sender: TObject);
 begin
     dts.DataSet.Post;
     habilita(true)
+end;
+
+procedure TfrmPadrao.FormCreate(Sender: TObject);
+begin
+    dts.DataSet.Open;
 end;
 
 procedure TfrmPadrao.habilita(ativa: boolean);

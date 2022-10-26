@@ -1,0 +1,11 @@
+inherited frmCadCidade: TfrmCadCidade
+  Caption = 'Cadastro de Cidade'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited frmbotoes: TPanel
+    inherited btnClose: TBitBtn
+      Left = 748
+      ExplicitLeft = 748
+    end
+  end
+end
