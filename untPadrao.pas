@@ -28,6 +28,7 @@ type
     procedure btnCancelClick(Sender: TObject);
     procedure btnCloseClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
   public
@@ -56,7 +57,7 @@ end;
 
 procedure TfrmPadrao.btnCloseClick(Sender: TObject);
 begin
-    close;
+    destroy;
 end;
 
 procedure TfrmPadrao.btnEditClick(Sender: TObject);
@@ -81,6 +82,11 @@ end;
 procedure TfrmPadrao.FormCreate(Sender: TObject);
 begin
     dts.DataSet.Open;
+end;
+
+procedure TfrmPadrao.FormDestroy(Sender: TObject);
+begin
+  dts.DataSet.close;
 end;
 
 procedure TfrmPadrao.habilita(ativa: boolean);

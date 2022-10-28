@@ -5,16 +5,15 @@ uses
   untPrincipal in 'untPrincipal.pas' {frmPrincipal},
   untPadrao in 'untPadrao.pas' {frmPadrao},
   untDtModel in 'untDtModel.pas' {Modulo: TDataModule},
-  untCadCidade in 'untCadCidade.pas' {frmCadCidade};
+  untCadCidade in 'untCadCidade.pas' {frmCadCidade},
+  untCadProduto in 'untCadProduto.pas' {frmCadProduto};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TfrmPrincipal, frmPrincipal);
-  Application.CreateForm(TfrmPadrao, frmPadrao);
   Application.CreateForm(TModulo, Modulo);
-  Application.CreateForm(TfrmCadCidade, frmCadCidade);
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.Run;
 end.

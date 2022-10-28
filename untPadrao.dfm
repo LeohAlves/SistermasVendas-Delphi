@@ -15,6 +15,7 @@ object frmPadrao: TfrmPadrao
   Position = poMainFormCenter
   Visible = True
   OnCreate = FormCreate
+  OnDestroy = FormDestroy
   PixelsPerInch = 96
   TextHeight = 13
   object frmbotoes: TPanel
@@ -24,8 +25,6 @@ object frmPadrao: TfrmPadrao
     Height = 78
     Align = alBottom
     TabOrder = 0
-    ExplicitLeft = 56
-    ExplicitTop = -46
     object btnAdd: TBitBtn
       Left = 0
       Top = 8
@@ -1040,8 +1039,6 @@ object frmPadrao: TfrmPadrao
     Height = 377
     Align = alClient
     TabOrder = 2
-    ExplicitLeft = 56
-    ExplicitTop = -423
   end
   object dts: TDataSource
     Left = 624

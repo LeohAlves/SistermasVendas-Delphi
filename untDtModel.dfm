@@ -14,12 +14,12 @@ object Modulo: TModulo
   end
   object FDPhysMySQLDriverLink: TFDPhysMySQLDriverLink
     VendorLib = 'C:\Users\etec\Desktop\SistermasVendas-Delphi\libmysql.dll'
-    Left = 112
+    Left = 216
     Top = 8
   end
   object FDGUIxWaitCursor1: TFDGUIxWaitCursor
     Provider = 'Forms'
-    Left = 64
+    Left = 104
     Top = 8
   end
   object qryAutoNum: TFDQuery
@@ -27,36 +27,67 @@ object Modulo: TModulo
     SQL.Strings = (
       ''
       '')
-    Left = 216
-    Top = 8
+    Left = 16
+    Top = 96
   end
   object qryCidade: TFDQuery
     Connection = conn
     SQL.Strings = (
       'SELECT * FROM CIDADE')
-    Left = 288
-    Top = 8
+    Left = 104
+    Top = 96
     object qryCidadeIDCIDADE: TIntegerField
-      DisplayLabel = 'Codigo'
       FieldName = 'IDCIDADE'
       Origin = 'IDCIDADE'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      ReadOnly = True
       Required = True
     end
     object qryCidadeNOMECIDADE: TStringField
       AutoGenerateValue = arDefault
-      DisplayLabel = 'Cidade'
       FieldName = 'NOMECIDADE'
       Origin = 'NOMECIDADE'
       Size = 50
     end
     object qryCidadeSIGLAESTADO: TStringField
       AutoGenerateValue = arDefault
-      DisplayLabel = 'Estado'
       FieldName = 'SIGLAESTADO'
       Origin = 'SIGLAESTADO'
       Size = 2
+    end
+  end
+  object qryProduto: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      'SELECT * FROM PRODUTO')
+    Left = 216
+    Top = 96
+    object qryProdutoIDPRODUTO: TIntegerField
+      DisplayLabel = 'Codigo'
+      FieldName = 'IDPRODUTO'
+      Origin = 'IDPRODUTO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryProdutoDESCRPRODUTO: TStringField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Descri'#231'ao'
+      FieldName = 'DESCRPRODUTO'
+      Origin = 'DESCRPRODUTO'
+      Size = 50
+    end
+    object qryProdutoVALORPRODUTO: TBCDField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Valor'
+      FieldName = 'VALORPRODUTO'
+      Origin = 'VALORPRODUTO'
+      Precision = 8
+      Size = 2
+    end
+    object qryProdutoQTDEPRODUTO: TIntegerField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Quantidade'
+      FieldName = 'QTDEPRODUTO'
+      Origin = 'QTDEPRODUTO'
     end
   end
 end

@@ -11,8 +11,22 @@
     <Transaction>2022/10/20 22:14:00.000.951,=C:\Users\etec\Desktop\SistermasVendas-Delphi\Unit1.pas</Transaction>
     <Transaction>2022/10/20 22:14:28.000.781,C:\Users\etec\Desktop\SistermasVendas-Delphi\Unit1.pas=C:\Users\etec\Desktop\SistermasVendas-Delphi\untDtModel.pas</Transaction>
     <Transaction>2022/10/20 22:14:28.000.781,C:\Users\etec\Desktop\SistermasVendas-Delphi\Unit1.dfm=C:\Users\etec\Desktop\SistermasVendas-Delphi\untDtModel.dfm</Transaction>
-    <Transaction>2022/10/25 22:07:43.462,=C:\Users\etec\Desktop\SistermasVendas-Delphi\Unit1.pas</Transaction>
-    <Transaction>2022/10/25 22:09:09.719,C:\Users\etec\Desktop\SistermasVendas-Delphi\untCadCidade.pas=C:\Users\etec\Desktop\SistermasVendas-Delphi\Unit1.pas</Transaction>
-    <Transaction>2022/10/25 22:09:09.719,C:\Users\etec\Desktop\SistermasVendas-Delphi\untCadCidade.dfm=C:\Users\etec\Desktop\SistermasVendas-Delphi\Unit1.dfm</Transaction>
-  </Transactions>
+    <Transaction>2022/10/25 22:07:43.000.462,=C:\Users\etec\Desktop\SistermasVendas-Delphi\Unit1.pas</Transaction>
+    <Transaction>2022/10/25 22:09:09.000.719,C:\Users\etec\Desktop\SistermasVendas-Delphi\untCadCidade.dfm=C:\Users\etec\Desktop\SistermasVendas-Delphi\Unit1.dfm</Transaction>
+    <Transaction>2022/10/25 22:09:09.000.719,C:\Users\etec\Desktop\SistermasVendas-Delphi\untCadCidade.pas=C:\Users\etec\Desktop\SistermasVendas-Delphi\Unit1.pas</Transaction>
+    <Transaction>2022/10/27 22:09:36.345,=C:\Users\etec\Desktop\SistermasVendas-Delphi\Unit1.pas</Transaction>
+    <Transaction>2022/10/27 22:10:18.227,C:\Users\etec\Desktop\SistermasVendas-Delphi\untCadProduto.pas=C:\Users\etec\Desktop\SistermasVendas-Delphi\Unit1.pas</Transaction>
+    <Transaction>2022/10/27 22:10:18.227,C:\Users\etec\Desktop\SistermasVendas-Delphi\untCadProduto.dfm=C:\Users\etec\Desktop\SistermasVendas-Delphi\Unit1.dfm</Transaction>
+  </Transactions>  <ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="untCadCidade.pas"/>
+    <File Path="untCadCidade.dfm"/>
+    <File Path="untCadProduto.pas"/>
+    <File Path="untCadProduto.dfm"/>
+    <File Path="untDtModel.pas"/>
+    <File Path="untDtModel.dfm"/>
+    <File Path="untPrincipal.pas"/>
+    <File Path="untPrincipal.dfm"/>
+    <File Path="untPadrao.pas"/>
+    <File Path="untPadrao.dfm"/>
+  </ProjectSortOrder>
 </BorlandProject>

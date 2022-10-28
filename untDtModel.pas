@@ -20,6 +20,11 @@ type
     qryCidadeIDCIDADE: TIntegerField;
     qryCidadeNOMECIDADE: TStringField;
     qryCidadeSIGLAESTADO: TStringField;
+    qryProduto: TFDQuery;
+    qryProdutoIDPRODUTO: TIntegerField;
+    qryProdutoDESCRPRODUTO: TStringField;
+    qryProdutoVALORPRODUTO: TBCDField;
+    qryProdutoQTDEPRODUTO: TIntegerField;
   private
     { Private declarations }
   public
@@ -44,9 +49,10 @@ begin
     vSQL := ' SELECT MAX( ' + id + ') + 1 FROM ' + tabela;
     qryAutoNum.SQL.Text := vSQL;
     qryAutoNum.Open;
-    if qryAutoNum.IsEmpty then
-      autonum := '1'
-    else AutoNum := qryAutoNum.fields[0].AsString;
+    if qryAutoNum.Fields[0].AsString= '' then
+       autoNum := '1'
+    else
+       AutoNum := qryAutoNum.fields[0].AsString;
 end;
 
 end.
