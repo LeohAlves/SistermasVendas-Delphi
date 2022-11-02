@@ -90,4 +90,51 @@ object Modulo: TModulo
       Origin = 'QTDEPRODUTO'
     end
   end
+  object qryCliente: TFDQuery
+    Active = True
+    Connection = conn
+    SQL.Strings = (
+      'SELECT * FROM CLIENTE')
+    Left = 272
+    Top = 96
+    object qryClienteIDCLIENTE: TIntegerField
+      DisplayLabel = 'Codigo'
+      FieldName = 'IDCLIENTE'
+      Origin = 'IDCLIENTE'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryClienteNOMECLIENTE: TStringField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Nome'
+      FieldName = 'NOMECLIENTE'
+      Origin = 'NOMECLIENTE'
+      Size = 50
+    end
+    object qryClienteENDERCLIENTE: TStringField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Endere'#231'o'
+      FieldName = 'ENDERCLIENTE'
+      Origin = 'ENDERCLIENTE'
+      Size = 50
+    end
+    object qryClienteCPFCLIENTE: TStringField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'CPF'
+      FieldName = 'CPFCLIENTE'
+      Origin = 'CPFCLIENTE'
+    end
+    object qryClienteFONECLIENTE: TStringField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Telefone'
+      FieldName = 'FONECLIENTE'
+      Origin = 'FONECLIENTE'
+    end
+    object qryClienteIDCIDADE: TIntegerField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Cidade'
+      FieldName = 'IDCIDADE'
+      Origin = 'IDCIDADE'
+    end
+  end
 end
