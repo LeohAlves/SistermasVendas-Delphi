@@ -31,6 +31,7 @@ object Modulo: TModulo
     Top = 96
   end
   object qryCidade: TFDQuery
+    Active = True
     Connection = conn
     SQL.Strings = (
       'SELECT * FROM CIDADE')
@@ -136,5 +137,19 @@ object Modulo: TModulo
       FieldName = 'IDCIDADE'
       Origin = 'IDCIDADE'
     end
+    object qryClienteNOMECIDADE: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NOMECIDADE'
+      LookupDataSet = qryCidade
+      LookupKeyFields = 'IDCIDADE'
+      LookupResultField = 'NOMECIDADE'
+      KeyFields = 'IDCIDADE'
+      Size = 50
+      Lookup = True
+    end
+  end
+  object IdBlockCipherIntercept1: TIdBlockCipherIntercept
+    Left = 912
+    Top = 512
   end
 end

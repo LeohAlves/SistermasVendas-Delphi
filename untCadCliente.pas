@@ -21,7 +21,10 @@ type
     DBEdit5: TDBEdit;
     Label6: TLabel;
     DBEdit6: TDBEdit;
+    DBLookupComboBox1: TDBLookupComboBox;
     procedure btnAddClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
   public
@@ -41,6 +44,18 @@ procedure TfrmCadCliente.btnAddClick(Sender: TObject);
 begin
   inherited;
     modulo.qryClienteIDCLIENTE.AsString :=  modulo.autoNum('IDCLIENTE' , 'CLIENTE' );
+end;
+
+procedure TfrmCadCliente.FormCreate(Sender: TObject);
+begin
+  inherited;
+    modulo.qryCidade.Open();
+end;
+
+procedure TfrmCadCliente.FormDestroy(Sender: TObject);
+begin
+  inherited;
+    modulo.qryCidade.Close();
 end;
 
 end.

@@ -1,5 +1,4 @@
 inherited frmCadCidade: TfrmCadCidade
-  BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Cadastro de Cidade'
   KeyPreview = True
   PixelsPerInch = 96

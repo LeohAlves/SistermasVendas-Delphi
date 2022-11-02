@@ -8,7 +8,8 @@ uses
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.MySQLDef,
   FireDAC.VCLUI.Wait, FireDAC.Comp.UI, FireDAC.Phys.MySQL, Data.DB,
   FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf,
-  FireDAC.DApt, FireDAC.Comp.DataSet;
+  FireDAC.DApt, FireDAC.Comp.DataSet, IdIntercept, IdBaseComponent,
+  IdBlockCipherIntercept;
 
 type
   TModulo = class(TDataModule)
@@ -32,6 +33,8 @@ type
     qryClienteCPFCLIENTE: TStringField;
     qryClienteFONECLIENTE: TStringField;
     qryClienteIDCIDADE: TIntegerField;
+    qryClienteNOMECIDADE: TStringField;
+    IdBlockCipherIntercept1: TIdBlockCipherIntercept;
   private
     { Private declarations }
   public

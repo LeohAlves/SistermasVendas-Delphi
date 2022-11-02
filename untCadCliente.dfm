@@ -3,7 +3,8 @@ inherited frmCadCliente: TfrmCadCliente
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    ExplicitLeft = 8
+    ExplicitLeft = -24
+    ExplicitTop = 65
     object Label1: TLabel
       Left = 8
       Top = 6
@@ -100,11 +101,20 @@ inherited frmCadCliente: TfrmCadCliente
     object DBEdit6: TDBEdit
       Left = 8
       Top = 222
-      Width = 134
+      Width = 42
       Height = 21
       DataField = 'IDCIDADE'
       DataSource = dts
       TabOrder = 5
+    end
+    object DBLookupComboBox1: TDBLookupComboBox
+      Left = 64
+      Top = 222
+      Width = 145
+      Height = 21
+      DataField = 'NOMECIDADE'
+      DataSource = dts
+      TabOrder = 6
     end
   end
   inherited dts: TDataSource

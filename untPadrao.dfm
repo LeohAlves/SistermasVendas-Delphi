@@ -1,6 +1,7 @@
 object frmPadrao: TfrmPadrao
   Left = 0
   Top = 0
+  BorderIcons = []
   Caption = 'frmPadrao'
   ClientHeight = 536
   ClientWidth = 824
