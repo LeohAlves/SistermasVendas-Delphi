@@ -7,7 +7,9 @@ uses
   untDtModel in 'untDtModel.pas' {Modulo: TDataModule},
   untCadCidade in 'untCadCidade.pas' {frmCadCidade},
   untCadProduto in 'untCadProduto.pas' {frmCadProduto},
-  untCadCliente in 'untCadCliente.pas' {frmCadCliente};
+  untCadCliente in 'untCadCliente.pas' {frmCadCliente},
+  untCadVenda in 'untCadVenda.pas' {frmCadVenda},
+  untPadraoPesquisa in 'untPadraoPesquisa.pas' {frmPadraoPesquisa};
 
 {$R *.res}
 

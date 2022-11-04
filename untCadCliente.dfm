@@ -3,8 +3,6 @@ inherited frmCadCliente: TfrmCadCliente
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    ExplicitLeft = -24
-    ExplicitTop = 65
     object Label1: TLabel
       Left = 8
       Top = 6
@@ -87,6 +85,7 @@ inherited frmCadCliente: TfrmCadCliente
       Height = 21
       DataField = 'CPFCLIENTE'
       DataSource = dts
+      MaxLength = 14
       TabOrder = 3
     end
     object DBEdit5: TDBEdit
@@ -96,6 +95,7 @@ inherited frmCadCliente: TfrmCadCliente
       Height = 21
       DataField = 'FONECLIENTE'
       DataSource = dts
+      MaxLength = 15
       TabOrder = 4
     end
     object DBEdit6: TDBEdit

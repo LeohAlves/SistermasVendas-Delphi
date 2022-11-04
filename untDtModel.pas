@@ -34,7 +34,14 @@ type
     qryClienteFONECLIENTE: TStringField;
     qryClienteIDCIDADE: TIntegerField;
     qryClienteNOMECIDADE: TStringField;
-    IdBlockCipherIntercept1: TIdBlockCipherIntercept;
+    ronan: TIdBlockCipherIntercept;
+    qryVenda: TFDQuery;
+    qryVendaIDVENDA: TIntegerField;
+    qryVendaDATAVENDA: TDateField;
+    qryVendaHORAVENDA: TTimeField;
+    qryVendaVALORVENDA: TBCDField;
+    qryVendaIDCLIENTE: TIntegerField;
+    qryVendaNOMECLIENTE: TStringField;
   private
     { Private declarations }
   public

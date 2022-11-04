@@ -1,0 +1,13 @@
+inherited frmPadrao1: TfrmPadrao1
+  Caption = 'frmPadrao1'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    ExplicitTop = 83
+  end
+  inherited dts: TDataSource
+    DataSet = Modulo.qryVenda
+    Left = 632
+    Top = 16
+  end
+end

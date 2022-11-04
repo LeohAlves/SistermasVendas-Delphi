@@ -1,0 +1,61 @@
+unit untCadVenda;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, untPadrao, Data.DB, Vcl.Grids,
+  Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, Vcl.Mask, Vcl.DBCtrls;
+
+type
+  TfrmCadVenda = class(TfrmPadrao)
+    Label1: TLabel;
+    DBECodigo: TDBEdit;
+    Label2: TLabel;
+    DBEData: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    Label4: TLabel;
+    DBETotal: TDBEdit;
+    Label5: TLabel;
+    DBEcodeCliente: TDBEdit;
+    DBECliente: TDBEdit;
+    procedure btnAddClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCadVenda: TfrmCadVenda;
+
+implementation
+
+{$R *.dfm}
+
+uses untDtModel;
+
+procedure TfrmCadVenda.btnAddClick(Sender: TObject);
+begin
+  inherited;
+    modulo.qryVENDAIDVENDA.AsString :=  modulo.autoNum('IDVENDA' , 'VENDA' );
+    Modulo.qryVendaDATAVENDA.AsString := DateToStr(date);
+    Modulo.qryVendaHORAVENDA.AsString := FormatDateTime('hh:mm', time);
+end;
+
+procedure TfrmCadVenda.FormCreate(Sender: TObject);
+begin
+  inherited;
+    modulo.qryCliente.Open();
+end;
+
+procedure TfrmCadVenda.FormDestroy(Sender: TObject);
+begin
+  inherited;
+    modulo.qryCliente.Close();
+end;
+
+end.
