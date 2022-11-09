@@ -1,4 +1,5 @@
 inherited frmPesCliente: TfrmPesCliente
+  BorderIcons = []
   Caption = 'Pesquisa Cliente'
   ClientHeight = 265
   ClientWidth = 816
@@ -9,8 +10,8 @@ inherited frmPesCliente: TfrmPesCliente
   inherited pnlBotoes: TPanel
     Top = 190
     Width = 816
-    ExplicitTop = 186
-    ExplicitWidth = 641
+    ExplicitTop = 190
+    ExplicitWidth = 816
     inherited btnSearch: TBitBtn
       OnClick = btnSearchClick
     end
@@ -21,9 +22,8 @@ inherited frmPesCliente: TfrmPesCliente
   inherited pnlPesquisa: TPanel
     Width = 816
     Height = 70
-    ExplicitLeft = -8
-    ExplicitWidth = 940
-    ExplicitHeight = 175
+    ExplicitWidth = 816
+    ExplicitHeight = 70
     object Label1: TLabel
       Left = 16
       Top = 19

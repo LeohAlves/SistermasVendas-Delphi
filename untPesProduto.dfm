@@ -1,4 +1,5 @@
 inherited frmPesProduto: TfrmPesProduto
+  BorderIcons = []
   Caption = 'Pesquisa Produto'
   ClientHeight = 321
   ClientWidth = 660
