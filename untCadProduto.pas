@@ -18,6 +18,7 @@ type
     Label4: TLabel;
     DBEQtde: TDBEdit;
     procedure btnAddClick(Sender: TObject);
+    procedure btnSearchClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,12 +32,19 @@ implementation
 
 {$R *.dfm}
 
-uses untDtModel;
+uses untDtModel, untPesProduto;
 
 procedure TfrmCadProduto.btnAddClick(Sender: TObject);
 begin
   inherited;
   modulo.qryProdutoIDPRODUTO.AsString :=  modulo.autoNum('IDPRODUTO' , 'PRODUTO' );
+end;
+
+procedure TfrmCadProduto.btnSearchClick(Sender: TObject);
+begin
+  inherited;
+  Application.CreateForm(TfrmPesProduto, frmPesProduto);
+  frmPesProduto.Show;
 end;
 
 end.

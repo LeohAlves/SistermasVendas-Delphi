@@ -9,6 +9,9 @@ inherited frmCadCidade: TfrmCadCidade
       Default = True
       ExplicitTop = 6
     end
+    inherited btnSearch: TBitBtn
+      OnClick = btnSearchClick
+    end
     inherited btnClose: TBitBtn
       Left = 748
       ExplicitLeft = 748

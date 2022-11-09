@@ -9,7 +9,10 @@ uses
   untCadProduto in 'untCadProduto.pas' {frmCadProduto},
   untCadCliente in 'untCadCliente.pas' {frmCadCliente},
   untCadVenda in 'untCadVenda.pas' {frmCadVenda},
-  untPadraoPesquisa in 'untPadraoPesquisa.pas' {frmPadraoPesquisa};
+  untPadraoPesquisa in 'untPadraoPesquisa.pas' {frmPadraoPesquisa},
+  untPesCidade in 'untPesCidade.pas' {frmPesCidade},
+  untPesCliente in 'untPesCliente.pas' {frmPesCliente},
+  untPesProduto in 'untPesProduto.pas' {frmPesProduto};
 
 {$R *.res}
 
@@ -18,5 +21,6 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TModulo, Modulo);
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TfrmPesProduto, frmPesProduto);
   Application.Run;
 end.

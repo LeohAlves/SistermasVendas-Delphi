@@ -2,25 +2,29 @@ object frmPadraoPesquisa: TfrmPadraoPesquisa
   Left = 0
   Top = 0
   Caption = 'Pesquisa'
-  ClientHeight = 443
-  ClientWidth = 686
+  ClientHeight = 261
+  ClientWidth = 641
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  FormStyle = fsMDIChild
   OldCreateOrder = False
+  Position = poMainFormCenter
+  Visible = True
   PixelsPerInch = 96
   TextHeight = 13
   object pnlBotoes: TPanel
     Left = 0
-    Top = 368
-    Width = 686
+    Top = 186
+    Width = 641
     Height = 75
     Align = alBottom
     TabOrder = 0
-    ExplicitLeft = -64
+    ExplicitTop = 368
+    ExplicitWidth = 686
     object btnClose: TBitBtn
       Left = 95
       Top = 6
@@ -272,7 +276,7 @@ object frmPadraoPesquisa: TfrmPadraoPesquisa
   object dbgPesquisa: TDBGrid
     Left = 0
     Top = 0
-    Width = 686
+    Width = 641
     Height = 120
     Align = alTop
     DataSource = dtsPesquisa
@@ -286,17 +290,15 @@ object frmPadraoPesquisa: TfrmPadraoPesquisa
   object pnlPesquisa: TPanel
     Left = 0
     Top = 120
-    Width = 686
-    Height = 248
+    Width = 641
+    Height = 66
     Align = alClient
     TabOrder = 2
-    ExplicitLeft = 328
-    ExplicitTop = 192
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitWidth = 686
+    ExplicitHeight = 248
   end
   object dtsPesquisa: TDataSource
-    Left = 624
-    Top = 392
+    Left = 600
+    Top = 144
   end
 end

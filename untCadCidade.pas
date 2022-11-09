@@ -16,6 +16,7 @@ type
     Label3: TLabel;
     DBEdit3: TDBEdit;
     procedure btnAddClick(Sender: TObject);
+    procedure btnSearchClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,13 +30,20 @@ implementation
 
 {$R *.dfm}
 
-uses untDtModel;
+uses untDtModel, untPesCidade;
 
 procedure TfrmCadCidade.btnAddClick(Sender: TObject);
 begin
   inherited;
   modulo.qryCidadeIDCIDADE.AsString :=  modulo.autoNum('IDCIDADE' , 'CIDADE' );
 
+end;
+
+procedure TfrmCadCidade.btnSearchClick(Sender: TObject);
+begin
+  inherited;
+  Application.CreateForm(TfrmPesCidade, frmPesCidade);
+  frmPesCidade.Show;
 end;
 
 end.
