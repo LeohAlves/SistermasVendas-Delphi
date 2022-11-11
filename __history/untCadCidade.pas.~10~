@@ -41,16 +41,16 @@ begin
 end;
 
 procedure TfrmCadCidade.btnAttClick(Sender: TObject);
-// var vPesq: string;
+var vPesq: string;
 begin
   inherited;
 
-  {vPesq := '';
+  vPesq := '';
   modulo.qryCidade.Close;
 
   vPesq := ' SELECT * FROM cidade ' + ' WHERE IDCidade IS NOT NULL ';
   modulo.qryCidade.SQL.CommaText := vPesq;
-  modulo.qryCidade.Open();}
+  modulo.qryCidade.Open();
 
 end;
 
