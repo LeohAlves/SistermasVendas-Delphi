@@ -41,10 +41,9 @@ begin
 end;
 
 procedure TfrmCadCidade.btnAttClick(Sender: TObject);
-var vPesq: string;
 begin
   inherited;
-
+  var vPesq: string;
   vPesq := '';
   modulo.qryCidade.Close;
 
