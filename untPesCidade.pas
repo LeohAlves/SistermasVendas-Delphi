@@ -44,7 +44,7 @@ begin
     end;
 
   if edtNome.Text <> '' then
-  vPesq := vPesq + ' AND NOMECIDADE LIKE ' + QuotedStr('%'+edtnome.text +'%');
+  vPesq := vPesq + ' AND NOMECIDADE LIKE ' + QuotedStr(' % '+ edtnome.text + '% ');
 
   modulo.qryCidade.SQL.CommaText := vPesq;
   modulo.qryCidade.Open();

@@ -12,7 +12,9 @@ uses
   untPadraoPesquisa in 'untPadraoPesquisa.pas' {frmPadraoPesquisa},
   untPesCidade in 'untPesCidade.pas' {frmPesCidade},
   untPesCliente in 'untPesCliente.pas' {frmPesCliente},
-  untPesProduto in 'untPesProduto.pas' {frmPesProduto};
+  untPesProduto in 'untPesProduto.pas' {frmPesProduto},
+  Vcl.Themes,
+  Vcl.Styles;
 
 {$R *.res}
 

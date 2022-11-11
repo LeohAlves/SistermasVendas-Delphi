@@ -17,7 +17,7 @@ type
     btnCancel: TBitBtn;
     btnSearch: TBitBtn;
     btnClose: TBitBtn;
-    btnSelecionar: TBitBtn;
+    btnAtt: TBitBtn;
     dts: TDataSource;
     dbg: TDBGrid;
     Panel1: TPanel;
@@ -42,6 +42,8 @@ var
 implementation
 
 {$R *.dfm}
+
+uses untDtModel;
 
 procedure TfrmPadrao.btnAddClick(Sender: TObject);
 begin
@@ -97,7 +99,7 @@ begin
     btnSave.Enabled := not ativa;
     btnCancel.Enabled := not ativa;
     btnSearch.Enabled := ativa;
-    btnSelecionar.Enabled :=  ativa;
+    btnAtt.Enabled :=  ativa;
     btnClose.Enabled :=  ativa;
 end;
 

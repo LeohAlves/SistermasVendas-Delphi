@@ -17,6 +17,7 @@ type
     DBEdit3: TDBEdit;
     procedure btnAddClick(Sender: TObject);
     procedure btnSearchClick(Sender: TObject);
+    procedure btnAttClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -36,6 +37,19 @@ procedure TfrmCadCidade.btnAddClick(Sender: TObject);
 begin
   inherited;
   modulo.qryCidadeIDCIDADE.AsString :=  modulo.autoNum('IDCIDADE' , 'CIDADE' );
+
+end;
+
+procedure TfrmCadCidade.btnAttClick(Sender: TObject);
+begin
+  inherited;
+  var vPesq: string;
+  vPesq := '';
+  modulo.qryCidade.Close;
+
+  vPesq := ' SELECT * FROM cidade ' + ' WHERE IDCidade IS NOT NULL ';
+  modulo.qryCidade.SQL.CommaText := vPesq;
+  modulo.qryCidade.Open();
 
 end;
 

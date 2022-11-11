@@ -16,6 +16,9 @@ inherited frmCadCidade: TfrmCadCidade
       Left = 748
       ExplicitLeft = 748
     end
+    inherited btnAtt: TBitBtn
+      OnClick = btnAttClick
+    end
   end
   inherited Panel1: TPanel
     object Label1: TLabel

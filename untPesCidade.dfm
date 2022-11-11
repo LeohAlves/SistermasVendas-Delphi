@@ -10,6 +10,8 @@ inherited frmPesCidade: TfrmPesCidade
   inherited pnlBotoes: TPanel
     Top = 187
     Width = 461
+    ExplicitTop = 187
+    ExplicitWidth = 461
     inherited btnSearch: TBitBtn
       OnClick = btnSearchClick
     end
@@ -20,10 +22,8 @@ inherited frmPesCidade: TfrmPesCidade
   inherited pnlPesquisa: TPanel
     Width = 461
     Height = 67
-    ExplicitLeft = -16
-    ExplicitTop = 114
-    ExplicitWidth = 499
-    ExplicitHeight = 101
+    ExplicitWidth = 461
+    ExplicitHeight = 67
     object Label1: TLabel
       Left = 16
       Top = 16
