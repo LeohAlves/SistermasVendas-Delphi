@@ -57,10 +57,11 @@ object Modulo: TModulo
     end
   end
   object qryProduto: TFDQuery
+    Active = True
     Connection = conn
     SQL.Strings = (
       'SELECT * FROM PRODUTO')
-    Left = 216
+    Left = 160
     Top = 96
     object qryProdutoIDPRODUTO: TIntegerField
       DisplayLabel = 'Codigo'
@@ -96,7 +97,7 @@ object Modulo: TModulo
     Connection = conn
     SQL.Strings = (
       'SELECT * FROM CLIENTE')
-    Left = 272
+    Left = 216
     Top = 96
     object qryClienteIDCLIENTE: TIntegerField
       DisplayLabel = 'Codigo'
@@ -155,6 +156,7 @@ object Modulo: TModulo
     Top = 504
   end
   object qryVenda: TFDQuery
+    Active = True
     Connection = conn
     SQL.Strings = (
       'SELECT V.*,'
@@ -162,7 +164,7 @@ object Modulo: TModulo
       ' FROM VENDA V,'
       '      CLIENTE C'
       'WHERE V.IDCLIENTE = C.IDCLIENTE')
-    Left = 328
+    Left = 272
     Top = 96
     object qryVendaIDVENDA: TIntegerField
       DisplayLabel = 'Codigo'
@@ -206,6 +208,60 @@ object Modulo: TModulo
       ProviderFlags = []
       ReadOnly = True
       Size = 50
+    end
+  end
+  object qryPersonagens: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      'SELECT * FROM PERSONAGENS')
+    Left = 336
+    Top = 96
+    object qryPersonagensIDPERSO: TIntegerField
+      DisplayLabel = 'Id'
+      FieldName = 'IDPERSO'
+      Origin = 'IDPERSO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryPersonagensNOMEPERSO: TStringField
+      DisplayLabel = 'Nome'
+      FieldName = 'NOMEPERSO'
+      Origin = 'NOMEPERSO'
+      Required = True
+      Size = 50
+    end
+    object qryPersonagensELEMENTO: TStringField
+      DisplayLabel = 'Elemento'
+      FieldName = 'ELEMENTO'
+      Origin = 'ELEMENTO'
+      Required = True
+      Size = 10
+    end
+    object qryPersonagensRARIDADE: TSmallintField
+      DisplayLabel = 'Raridade'
+      FieldName = 'RARIDADE'
+      Origin = 'RARIDADE'
+      Required = True
+    end
+    object qryPersonagensARMA: TStringField
+      DisplayLabel = 'Arma'
+      FieldName = 'ARMA'
+      Origin = 'ARMA'
+      Required = True
+    end
+    object qryPersonagensMODELO: TStringField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Modelo'
+      FieldName = 'MODELO'
+      Origin = 'MODELO'
+      Size = 15
+    end
+    object qryPersonagensGENERO: TStringField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'G'#234'nero'
+      FieldName = 'GENERO'
+      Origin = 'GENERO'
+      Size = 15
     end
   end
 end

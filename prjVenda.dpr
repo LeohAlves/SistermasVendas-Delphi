@@ -14,7 +14,8 @@ uses
   untPesCliente in 'untPesCliente.pas' {frmPesCliente},
   untPesProduto in 'untPesProduto.pas' {frmPesProduto},
   Vcl.Themes,
-  Vcl.Styles;
+  Vcl.Styles,
+  untCadPersonagens in 'untCadPersonagens.pas' {frmCadPersonagens};
 
 {$R *.res}
 
@@ -23,5 +24,6 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TModulo, Modulo);
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TfrmCadPersonagens, frmCadPersonagens);
   Application.Run;
 end.

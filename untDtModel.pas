@@ -42,6 +42,14 @@ type
     qryVendaVALORVENDA: TBCDField;
     qryVendaIDCLIENTE: TIntegerField;
     qryVendaNOMECLIENTE: TStringField;
+    qryPersonagens: TFDQuery;
+    qryPersonagensIDPERSO: TIntegerField;
+    qryPersonagensNOMEPERSO: TStringField;
+    qryPersonagensELEMENTO: TStringField;
+    qryPersonagensRARIDADE: TSmallintField;
+    qryPersonagensARMA: TStringField;
+    qryPersonagensMODELO: TStringField;
+    qryPersonagensGENERO: TStringField;
   private
     { Private declarations }
   public
