@@ -3,8 +3,8 @@ inherited frmCadPersonagens: TfrmCadPersonagens
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    ExplicitLeft = -24
-    ExplicitTop = 75
+    ExplicitLeft = 80
+    ExplicitTop = 121
     object Label1: TLabel
       Left = 24
       Top = 16
@@ -68,6 +68,7 @@ inherited frmCadPersonagens: TfrmCadPersonagens
       Height = 21
       DataField = 'IDPERSO'
       DataSource = dts
+      ReadOnly = True
       TabOrder = 0
     end
     object DBEdit2: TDBEdit
@@ -80,8 +81,8 @@ inherited frmCadPersonagens: TfrmCadPersonagens
       TabOrder = 1
     end
     object DBEdit3: TDBEdit
-      Left = 24
-      Top = 88
+      Left = 368
+      Top = 240
       Width = 134
       Height = 21
       DataField = 'ELEMENTO'
@@ -89,8 +90,8 @@ inherited frmCadPersonagens: TfrmCadPersonagens
       TabOrder = 2
     end
     object DBEdit4: TDBEdit
-      Left = 232
-      Top = 32
+      Left = 430
+      Top = 104
       Width = 134
       Height = 21
       DataField = 'RARIDADE'
@@ -98,8 +99,8 @@ inherited frmCadPersonagens: TfrmCadPersonagens
       TabOrder = 3
     end
     object DBEdit5: TDBEdit
-      Left = 24
-      Top = 128
+      Left = 392
+      Top = 149
       Width = 134
       Height = 21
       DataField = 'ARMA'
@@ -107,7 +108,7 @@ inherited frmCadPersonagens: TfrmCadPersonagens
       TabOrder = 4
     end
     object DBEdit6: TDBEdit
-      Left = 24
+      Left = 208
       Top = 168
       Width = 134
       Height = 21
@@ -116,13 +117,58 @@ inherited frmCadPersonagens: TfrmCadPersonagens
       TabOrder = 5
     end
     object DBEdit7: TDBEdit
-      Left = 24
-      Top = 208
+      Left = 336
+      Top = 213
       Width = 89
       Height = 21
       DataField = 'GENERO'
       DataSource = dts
       TabOrder = 6
+    end
+    object DBLookupComboBox1: TDBLookupComboBox
+      Left = 232
+      Top = 35
+      Width = 145
+      Height = 21
+      DataField = 'RARIDADE'
+      DataSource = dts
+      TabOrder = 7
+    end
+    object DBLookupComboBox2: TDBLookupComboBox
+      Left = 24
+      Top = 165
+      Width = 145
+      Height = 21
+      DataField = 'MODELO'
+      DataSource = dts
+      TabOrder = 8
+    end
+    object DBLookupComboBox3: TDBLookupComboBox
+      Left = 24
+      Top = 125
+      Width = 145
+      Height = 21
+      DataField = 'ARMA'
+      DataSource = dts
+      TabOrder = 9
+    end
+    object DBLookupComboBox4: TDBLookupComboBox
+      Left = 24
+      Top = 85
+      Width = 145
+      Height = 21
+      DataField = 'ELEMENTO'
+      DataSource = dts
+      TabOrder = 10
+    end
+    object cbGenero: TDBLookupComboBox
+      Left = 24
+      Top = 205
+      Width = 145
+      Height = 21
+      DataField = 'GENERO'
+      DataSource = dts
+      TabOrder = 11
     end
   end
   inherited dts: TDataSource

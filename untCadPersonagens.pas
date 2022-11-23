@@ -23,8 +23,12 @@ type
     DBEdit6: TDBEdit;
     Label7: TLabel;
     DBEdit7: TDBEdit;
+    DBLookupComboBox1: TDBLookupComboBox;
+    DBLookupComboBox2: TDBLookupComboBox;
+    DBLookupComboBox3: TDBLookupComboBox;
+    DBLookupComboBox4: TDBLookupComboBox;
+    cbGenero: TDBLookupComboBox;
     procedure btnAddClick(Sender: TObject);
-    procedure btnCloseClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
   private
