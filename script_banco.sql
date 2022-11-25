@@ -49,26 +49,49 @@ CREATE TABLE  IF NOT EXISTS  ITENSVENDA
     FOREIGN KEY(IDPRODUTO) REFERENCES PRODUTO(IDPRODUTO)
 );
 
-CREATE TABLE IF NOT EXISTS Atributos
+CREATE TABLE IF NOT EXISTS Elemento
 (
-	ID	INT NOT NULL PRIMARY KEY,
-    ELEMENTO	VARCHAR(10) NOT NULL,
-    RARIDADE	VARCHAR(1) NOT NULL,
-    ARMA		VARCHAR(20) NOT NULL,
-    MODELO		VARCHAR(15),
-    GENERO		VARCHAR(15)
+	Id	INT NOT NULL PRIMARY KEY auto_increment,
+    ELEMENTO	VARCHAR(10) NOT NULL
+);
+CREATE TABLE IF NOT EXISTS Raridade
+(
+	Id	INT NOT NULL PRIMARY KEY auto_increment,
+    Raridade	VARCHAR(10) NOT NULL
+);
+CREATE TABLE IF NOT EXISTS Arma
+(
+	Id	INT NOT NULL PRIMARY KEY auto_increment,
+    Tipo	VARCHAR(20) NOT NULL
+);
+CREATE TABLE IF NOT EXISTS Genero
+(
+	Id	INT NOT NULL PRIMARY KEY auto_increment,
+    Name	VARCHAR(20) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS Personagens
 (
 	IDPERSO		INT NOT NULL PRIMARY KEY,
     NOMEPERSO	VARCHAR(50) NOT NULL,
-    AtributoId 	INT NOT NULL,
-	FOREIGN KEY(AtributoId) REFERENCES Atributos(ID)
+    ElementoId 	INT NOT NULL,
+    RaridadeId  INT NOT NULL,
+    ArmaId 		INT NOT NULL,
+    GeneroId 		INT NOT NULL,
+	FOREIGN KEY(ElementoId) REFERENCES Elemento(Id),
+    FOREIGN KEY(RaridadeId) REFERENCES Raridade(Id),
+    FOREIGN KEY(ArmaId) 	REFERENCES Arma(Id),
+    FOREIGN KEY(GeneroId)   REFERENCES Genero(Id)
 );
 
-INSERT INTO ATRIBUTOS(ELEMENTO) VALUES 
-('Pyro'), ('Cryo'), ('Anemo')
+INSERT INTO Elemento(ELEMENTO) VALUES 
+('Pyro'), ('Cryo'), ('Anemo'),('Dendro'), ('Hydro'), ('Geo');
 
+INSERT INTO Arma(Tipo) VALUES 
+('Espada'), ('Espada Grande'), ('Lança'),('Catalisador');
 
+INSERT INTO Raridade(Raridade) VALUES 
+('4 Estrelas'),('5 Estrelas');
 
+INSERT INTO Genero(Name) VALUES 
+('Feminino'),('Masculino'),('Não especificado');
