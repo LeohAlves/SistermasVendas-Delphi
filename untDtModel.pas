@@ -43,13 +43,22 @@ type
     qryVendaIDCLIENTE: TIntegerField;
     qryVendaNOMECLIENTE: TStringField;
     qryPersonagens: TFDQuery;
+    qryElemento: TFDQuery;
+    QryGenero: TFDQuery;
+    qryRaridade: TFDQuery;
     qryPersonagensIDPERSO: TIntegerField;
     qryPersonagensNOMEPERSO: TStringField;
-    qryPersonagensELEMENTO: TStringField;
-    qryPersonagensRARIDADE: TSmallintField;
-    qryPersonagensARMA: TStringField;
-    qryPersonagensMODELO: TStringField;
-    qryPersonagensGENERO: TStringField;
+    qryPersonagensElementoId: TIntegerField;
+    qryPersonagensRaridadeId: TIntegerField;
+    qryPersonagensArmaId: TIntegerField;
+    qryPersonagensGeneroId: TIntegerField;
+    qryElementoId: TFDAutoIncField;
+    qryElementoTipoELEMENTO: TStringField;
+    qryPersonagensTipoElemento: TStringField;
+    qryArma: TFDQuery;
+    qryPersonagensNomeArma: TStringField;
+    qryPersonagensTipoRaridade: TStringField;
+    qryPersonagensTipoGenero: TStringField;
   private
     { Private declarations }
   public

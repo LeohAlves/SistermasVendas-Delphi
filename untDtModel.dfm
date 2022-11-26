@@ -31,7 +31,6 @@ object Modulo: TModulo
     Top = 96
   end
   object qryCidade: TFDQuery
-    Active = True
     Connection = conn
     SQL.Strings = (
       'SELECT * FROM CIDADE')
@@ -57,7 +56,6 @@ object Modulo: TModulo
     end
   end
   object qryProduto: TFDQuery
-    Active = True
     Connection = conn
     SQL.Strings = (
       'SELECT * FROM PRODUTO')
@@ -93,7 +91,6 @@ object Modulo: TModulo
     end
   end
   object qryCliente: TFDQuery
-    Active = True
     Connection = conn
     SQL.Strings = (
       'SELECT * FROM CLIENTE')
@@ -156,7 +153,6 @@ object Modulo: TModulo
     Top = 504
   end
   object qryVenda: TFDQuery
-    Active = True
     Connection = conn
     SQL.Strings = (
       'SELECT V.*,'
@@ -217,7 +213,6 @@ object Modulo: TModulo
     Left = 336
     Top = 96
     object qryPersonagensIDPERSO: TIntegerField
-      DisplayLabel = 'Id'
       FieldName = 'IDPERSO'
       Origin = 'IDPERSO'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
@@ -230,38 +225,106 @@ object Modulo: TModulo
       Required = True
       Size = 50
     end
-    object qryPersonagensELEMENTO: TStringField
+    object qryPersonagensElementoId: TIntegerField
+      FieldName = 'ElementoId'
+      Origin = 'ElementoId'
+      Required = True
+    end
+    object qryPersonagensRaridadeId: TIntegerField
+      FieldName = 'RaridadeId'
+      Origin = 'RaridadeId'
+      Required = True
+    end
+    object qryPersonagensArmaId: TIntegerField
+      FieldName = 'ArmaId'
+      Origin = 'ArmaId'
+      Required = True
+    end
+    object qryPersonagensGeneroId: TIntegerField
+      FieldName = 'GeneroId'
+      Origin = 'GeneroId'
+      Required = True
+    end
+    object qryPersonagensTipoElemento: TStringField
       DisplayLabel = 'Elemento'
-      FieldName = 'ELEMENTO'
-      Origin = 'ELEMENTO'
+      FieldKind = fkLookup
+      FieldName = 'TipoElemento'
+      LookupDataSet = qryElemento
+      LookupKeyFields = 'Id'
+      LookupResultField = 'TipoELEMENTO'
+      KeyFields = 'ElementoId'
+      Size = 50
+      Lookup = True
+    end
+    object qryPersonagensNomeArma: TStringField
+      DisplayLabel = 'Arma'
+      FieldKind = fkLookup
+      FieldName = 'TipoArma'
+      LookupDataSet = qryArma
+      LookupKeyFields = 'Id'
+      LookupResultField = 'TipoArma'
+      KeyFields = 'ArmaId'
+      Lookup = True
+    end
+    object qryPersonagensTipoRaridade: TStringField
+      DisplayLabel = 'Raridade'
+      FieldKind = fkLookup
+      FieldName = 'TipoRaridade'
+      LookupDataSet = qryRaridade
+      LookupKeyFields = 'Id'
+      LookupResultField = 'TipoRaridade'
+      KeyFields = 'RaridadeId'
+      Size = 30
+      Lookup = True
+    end
+    object qryPersonagensTipoGenero: TStringField
+      DisplayLabel = 'Genero'
+      FieldKind = fkLookup
+      FieldName = 'TipoGenero'
+      LookupDataSet = QryGenero
+      LookupKeyFields = 'Id'
+      LookupResultField = 'NameGenero'
+      KeyFields = 'GeneroId'
+      Lookup = True
+    end
+  end
+  object qryElemento: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      'SELECT * FROM ELEMENTO')
+    Left = 408
+    Top = 96
+    object qryElementoId: TFDAutoIncField
+      FieldName = 'Id'
+      Origin = 'Id'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object qryElementoTipoELEMENTO: TStringField
+      FieldName = 'TipoELEMENTO'
+      Origin = 'TipoELEMENTO'
       Required = True
       Size = 10
     end
-    object qryPersonagensRARIDADE: TSmallintField
-      DisplayLabel = 'Raridade'
-      FieldName = 'RARIDADE'
-      Origin = 'RARIDADE'
-      Required = True
-    end
-    object qryPersonagensARMA: TStringField
-      DisplayLabel = 'Arma'
-      FieldName = 'ARMA'
-      Origin = 'ARMA'
-      Required = True
-    end
-    object qryPersonagensMODELO: TStringField
-      AutoGenerateValue = arDefault
-      DisplayLabel = 'Modelo'
-      FieldName = 'MODELO'
-      Origin = 'MODELO'
-      Size = 15
-    end
-    object qryPersonagensGENERO: TStringField
-      AutoGenerateValue = arDefault
-      DisplayLabel = 'G'#234'nero'
-      FieldName = 'GENERO'
-      Origin = 'GENERO'
-      Size = 15
-    end
+  end
+  object QryGenero: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      'Select * from Genero')
+    Left = 480
+    Top = 96
+  end
+  object qryRaridade: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      'Select * from Raridade')
+    Left = 536
+    Top = 96
+  end
+  object qryArma: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      'Select * from arma')
+    Left = 592
+    Top = 96
   end
 end

@@ -1,13 +1,24 @@
 inherited frmCadCliente: TfrmCadCliente
   Caption = 'frmCadCliente'
+  ClientHeight = 572
+  ClientWidth = 826
+  ExplicitWidth = 842
+  ExplicitHeight = 611
   PixelsPerInch = 96
   TextHeight = 13
   inherited frmbotoes: TPanel
+    Top = 494
+    Width = 826
     inherited btnSearch: TBitBtn
       OnClick = btnSearchClick
     end
   end
+  inherited dbg: TDBGrid
+    Width = 826
+  end
   inherited Panel1: TPanel
+    Width = 826
+    Height = 413
     object Label1: TLabel
       Left = 8
       Top = 6

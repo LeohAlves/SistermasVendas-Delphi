@@ -9,25 +9,22 @@ uses
 
 type
   TfrmCadPersonagens = class(TfrmPadrao)
+    DBLookupComboBox1: TDBLookupComboBox;
     Label1: TLabel;
     DBEdit1: TDBEdit;
     Label2: TLabel;
     DBEdit2: TDBEdit;
     Label3: TLabel;
-    DBEdit3: TDBEdit;
     Label4: TLabel;
     DBEdit4: TDBEdit;
     Label5: TLabel;
     DBEdit5: TDBEdit;
     Label6: TLabel;
     DBEdit6: TDBEdit;
-    Label7: TLabel;
     DBEdit7: TDBEdit;
-    DBLookupComboBox1: TDBLookupComboBox;
-    DBLookupComboBox2: TDBLookupComboBox;
     DBLookupComboBox3: TDBLookupComboBox;
     DBLookupComboBox4: TDBLookupComboBox;
-    cbGenero: TDBLookupComboBox;
+    DBLookupComboBox5: TDBLookupComboBox;
     procedure btnAddClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
