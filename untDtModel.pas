@@ -52,13 +52,19 @@ type
     qryPersonagensRaridadeId: TIntegerField;
     qryPersonagensArmaId: TIntegerField;
     qryPersonagensGeneroId: TIntegerField;
-    qryElementoId: TFDAutoIncField;
-    qryElementoTipoELEMENTO: TStringField;
-    qryPersonagensTipoElemento: TStringField;
     qryArma: TFDQuery;
-    qryPersonagensNomeArma: TStringField;
-    qryPersonagensTipoRaridade: TStringField;
+    qryElementoId: TFDAutoIncField;
+    qryElementoELEMENTO: TStringField;
+    qryRaridadeId: TFDAutoIncField;
+    qryRaridadeRaridade: TStringField;
+    qryArmaId: TFDAutoIncField;
+    qryArmaTipo: TStringField;
+    QryGeneroId: TFDAutoIncField;
+    QryGeneroName: TStringField;
     qryPersonagensTipoGenero: TStringField;
+    qryPersonagensTipoArma: TStringField;
+    qryPersonagensTipoElemento: TStringField;
+    qryPersonagensTipoRaridade: TStringField;
   private
     { Private declarations }
   public

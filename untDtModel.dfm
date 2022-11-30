@@ -207,12 +207,14 @@ object Modulo: TModulo
     end
   end
   object qryPersonagens: TFDQuery
+    Active = True
     Connection = conn
     SQL.Strings = (
       'SELECT * FROM PERSONAGENS')
     Left = 336
     Top = 96
     object qryPersonagensIDPERSO: TIntegerField
+      DisplayLabel = 'Id'
       FieldName = 'IDPERSO'
       Origin = 'IDPERSO'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
@@ -245,25 +247,37 @@ object Modulo: TModulo
       Origin = 'GeneroId'
       Required = True
     end
+    object qryPersonagensTipoGenero: TStringField
+      DisplayLabel = 'G'#234'nero'
+      FieldKind = fkLookup
+      FieldName = 'TipoGenero'
+      LookupDataSet = QryGenero
+      LookupKeyFields = 'Id'
+      LookupResultField = 'Name'
+      KeyFields = 'GeneroId'
+      Size = 111
+      Lookup = True
+    end
+    object qryPersonagensTipoArma: TStringField
+      DisplayLabel = 'Arma'
+      FieldKind = fkLookup
+      FieldName = 'TipoArma'
+      LookupDataSet = qryArma
+      LookupKeyFields = 'Id'
+      LookupResultField = 'Tipo'
+      KeyFields = 'ArmaId'
+      Size = 111
+      Lookup = True
+    end
     object qryPersonagensTipoElemento: TStringField
       DisplayLabel = 'Elemento'
       FieldKind = fkLookup
       FieldName = 'TipoElemento'
       LookupDataSet = qryElemento
       LookupKeyFields = 'Id'
-      LookupResultField = 'TipoELEMENTO'
+      LookupResultField = 'ELEMENTO'
       KeyFields = 'ElementoId'
-      Size = 50
-      Lookup = True
-    end
-    object qryPersonagensNomeArma: TStringField
-      DisplayLabel = 'Arma'
-      FieldKind = fkLookup
-      FieldName = 'TipoArma'
-      LookupDataSet = qryArma
-      LookupKeyFields = 'Id'
-      LookupResultField = 'TipoArma'
-      KeyFields = 'ArmaId'
+      Size = 111
       Lookup = True
     end
     object qryPersonagensTipoRaridade: TStringField
@@ -272,59 +286,81 @@ object Modulo: TModulo
       FieldName = 'TipoRaridade'
       LookupDataSet = qryRaridade
       LookupKeyFields = 'Id'
-      LookupResultField = 'TipoRaridade'
+      LookupResultField = 'Raridade'
       KeyFields = 'RaridadeId'
-      Size = 30
-      Lookup = True
-    end
-    object qryPersonagensTipoGenero: TStringField
-      DisplayLabel = 'Genero'
-      FieldKind = fkLookup
-      FieldName = 'TipoGenero'
-      LookupDataSet = QryGenero
-      LookupKeyFields = 'Id'
-      LookupResultField = 'NameGenero'
-      KeyFields = 'GeneroId'
+      Size = 111
       Lookup = True
     end
   end
   object qryElemento: TFDQuery
+    Active = True
     Connection = conn
     SQL.Strings = (
       'SELECT * FROM ELEMENTO')
-    Left = 408
+    Left = 416
     Top = 96
     object qryElementoId: TFDAutoIncField
       FieldName = 'Id'
-      Origin = 'Id'
-      ProviderFlags = [pfInWhere, pfInKey]
     end
-    object qryElementoTipoELEMENTO: TStringField
-      FieldName = 'TipoELEMENTO'
-      Origin = 'TipoELEMENTO'
+    object qryElementoELEMENTO: TStringField
+      FieldName = 'ELEMENTO'
       Required = True
       Size = 10
     end
   end
   object QryGenero: TFDQuery
+    Active = True
     Connection = conn
     SQL.Strings = (
       'Select * from Genero')
     Left = 480
     Top = 96
+    object QryGeneroId: TFDAutoIncField
+      FieldName = 'Id'
+      Origin = 'Id'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object QryGeneroName: TStringField
+      FieldName = 'Name'
+      Origin = 'Name'
+      Required = True
+    end
   end
   object qryRaridade: TFDQuery
+    Active = True
     Connection = conn
     SQL.Strings = (
       'Select * from Raridade')
     Left = 536
     Top = 96
+    object qryRaridadeId: TFDAutoIncField
+      FieldName = 'Id'
+      Origin = 'Id'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object qryRaridadeRaridade: TStringField
+      FieldName = 'Raridade'
+      Origin = 'Raridade'
+      Required = True
+      Size = 10
+    end
   end
   object qryArma: TFDQuery
+    Active = True
     Connection = conn
     SQL.Strings = (
       'Select * from arma')
     Left = 592
     Top = 96
+    object qryArmaId: TFDAutoIncField
+      FieldName = 'Id'
+      Origin = 'Id'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object qryArmaTipo: TStringField
+      FieldName = 'Tipo'
+      Origin = 'Tipo'
+      Required = True
+    end
   end
 end

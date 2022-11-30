@@ -86,9 +86,12 @@ CREATE TABLE IF NOT EXISTS Personagens
 
 INSERT INTO Elemento(ELEMENTO) VALUES 
 ('Pyro'), ('Cryo'), ('Anemo'),('Dendro'), ('Hydro'), ('Geo');
-
+INSERT INTO Elemento(ELEMENTO) VALUES 
+('Electro');
 INSERT INTO Arma(Tipo) VALUES 
 ('Espada'), ('Espada Grande'), ('Lança'),('Catalisador');
+INSERT INTO Arma(Tipo) VALUES 
+('Arco');
 
 INSERT INTO Raridade(Raridade) VALUES 
 ('4 Estrelas'),('5 Estrelas');

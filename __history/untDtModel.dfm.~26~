@@ -1,0 +1,360 @@
+object Modulo: TModulo
+  OldCreateOrder = False
+  Height = 545
+  Width = 1047
+  object conn: TFDConnection
+    Params.Strings = (
+      'Database=VENDA'
+      'User_Name=root'
+      'DriverID=MySQL')
+    Connected = True
+    LoginPrompt = False
+    Left = 8
+    Top = 8
+  end
+  object FDPhysMySQLDriverLink: TFDPhysMySQLDriverLink
+    VendorLib = 'C:\Users\etec\Desktop\SistermasVendas-Delphi\libmysql.dll'
+    Left = 216
+    Top = 8
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 104
+    Top = 8
+  end
+  object qryAutoNum: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      ''
+      '')
+    Left = 16
+    Top = 96
+  end
+  object qryCidade: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      'SELECT * FROM CIDADE')
+    Left = 104
+    Top = 96
+    object qryCidadeIDCIDADE: TIntegerField
+      FieldName = 'IDCIDADE'
+      Origin = 'IDCIDADE'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryCidadeNOMECIDADE: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'NOMECIDADE'
+      Origin = 'NOMECIDADE'
+      Size = 50
+    end
+    object qryCidadeSIGLAESTADO: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'SIGLAESTADO'
+      Origin = 'SIGLAESTADO'
+      Size = 2
+    end
+  end
+  object qryProduto: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      'SELECT * FROM PRODUTO')
+    Left = 160
+    Top = 96
+    object qryProdutoIDPRODUTO: TIntegerField
+      DisplayLabel = 'Codigo'
+      FieldName = 'IDPRODUTO'
+      Origin = 'IDPRODUTO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryProdutoDESCRPRODUTO: TStringField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Descri'#231'ao'
+      FieldName = 'DESCRPRODUTO'
+      Origin = 'DESCRPRODUTO'
+      Size = 50
+    end
+    object qryProdutoVALORPRODUTO: TBCDField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Valor'
+      FieldName = 'VALORPRODUTO'
+      Origin = 'VALORPRODUTO'
+      Precision = 8
+      Size = 2
+    end
+    object qryProdutoQTDEPRODUTO: TIntegerField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Quantidade'
+      FieldName = 'QTDEPRODUTO'
+      Origin = 'QTDEPRODUTO'
+    end
+  end
+  object qryCliente: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      'SELECT * FROM CLIENTE')
+    Left = 216
+    Top = 96
+    object qryClienteIDCLIENTE: TIntegerField
+      DisplayLabel = 'Codigo'
+      FieldName = 'IDCLIENTE'
+      Origin = 'IDCLIENTE'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryClienteNOMECLIENTE: TStringField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Nome'
+      FieldName = 'NOMECLIENTE'
+      Origin = 'NOMECLIENTE'
+      Size = 50
+    end
+    object qryClienteENDERCLIENTE: TStringField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Endere'#231'o'
+      FieldName = 'ENDERCLIENTE'
+      Origin = 'ENDERCLIENTE'
+      Size = 50
+    end
+    object qryClienteCPFCLIENTE: TStringField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'CPF'
+      FieldName = 'CPFCLIENTE'
+      Origin = 'CPFCLIENTE'
+      EditMask = '000\.000\.000\-00;1;'
+    end
+    object qryClienteFONECLIENTE: TStringField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Telefone'
+      FieldName = 'FONECLIENTE'
+      Origin = 'FONECLIENTE'
+      EditMask = '\(00\) 00000-0000;1;_'
+    end
+    object qryClienteIDCIDADE: TIntegerField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Cidade'
+      FieldName = 'IDCIDADE'
+      Origin = 'IDCIDADE'
+    end
+    object qryClienteNOMECIDADE: TStringField
+      FieldKind = fkLookup
+      FieldName = 'NOMECIDADE'
+      LookupDataSet = qryCidade
+      LookupKeyFields = 'IDCIDADE'
+      LookupResultField = 'NOMECIDADE'
+      KeyFields = 'IDCIDADE'
+      Size = 50
+      Lookup = True
+    end
+  end
+  object ronan: TIdBlockCipherIntercept
+    Left = 912
+    Top = 504
+  end
+  object qryVenda: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      'SELECT V.*,'
+      '       C.NOMECLIENTE '
+      ' FROM VENDA V,'
+      '      CLIENTE C'
+      'WHERE V.IDCLIENTE = C.IDCLIENTE')
+    Left = 272
+    Top = 96
+    object qryVendaIDVENDA: TIntegerField
+      DisplayLabel = 'Codigo'
+      FieldName = 'IDVENDA'
+      Origin = 'IDVENDA'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryVendaDATAVENDA: TDateField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Data'
+      FieldName = 'DATAVENDA'
+      Origin = 'DATAVENDA'
+      EditMask = '!99/99/0000;1;_'
+    end
+    object qryVendaHORAVENDA: TTimeField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Hora'
+      FieldName = 'HORAVENDA'
+      Origin = 'HORAVENDA'
+    end
+    object qryVendaVALORVENDA: TBCDField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Total'
+      FieldName = 'VALORVENDA'
+      Origin = 'VALORVENDA'
+      currency = True
+      Precision = 8
+      Size = 2
+    end
+    object qryVendaIDCLIENTE: TIntegerField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'Cliente'
+      FieldName = 'IDCLIENTE'
+      Origin = 'IDCLIENTE'
+    end
+    object qryVendaNOMECLIENTE: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'NOMECLIENTE'
+      Origin = 'NOMECLIENTE'
+      ProviderFlags = []
+      ReadOnly = True
+      Size = 50
+    end
+  end
+  object qryPersonagens: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      'SELECT * FROM PERSONAGENS')
+    Left = 336
+    Top = 96
+    object qryPersonagensIDPERSO: TIntegerField
+      FieldName = 'IDPERSO'
+      Origin = 'IDPERSO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryPersonagensNOMEPERSO: TStringField
+      DisplayLabel = 'Nome'
+      FieldName = 'NOMEPERSO'
+      Origin = 'NOMEPERSO'
+      Required = True
+      Size = 50
+    end
+    object qryPersonagensElementoId: TIntegerField
+      FieldName = 'ElementoId'
+      Origin = 'ElementoId'
+      Required = True
+    end
+    object qryPersonagensRaridadeId: TIntegerField
+      FieldName = 'RaridadeId'
+      Origin = 'RaridadeId'
+      Required = True
+    end
+    object qryPersonagensArmaId: TIntegerField
+      FieldName = 'ArmaId'
+      Origin = 'ArmaId'
+      Required = True
+    end
+    object qryPersonagensGeneroId: TIntegerField
+      FieldName = 'GeneroId'
+      Origin = 'GeneroId'
+      Required = True
+    end
+    object qryPersonagensTipoGenero: TStringField
+      FieldKind = fkLookup
+      FieldName = 'TipoGenero'
+      LookupDataSet = QryGenero
+      LookupKeyFields = 'Id'
+      LookupResultField = 'Name'
+      KeyFields = 'GeneroId'
+      Size = 111
+      Lookup = True
+    end
+    object qryPersonagensTipoArma: TStringField
+      FieldKind = fkLookup
+      FieldName = 'TipoArma'
+      LookupDataSet = qryArma
+      LookupKeyFields = 'Id'
+      LookupResultField = 'Tipo'
+      KeyFields = 'ArmaId'
+      Size = 111
+      Lookup = True
+    end
+    object qryPersonagensTipoElemento: TStringField
+      FieldKind = fkLookup
+      FieldName = 'TipoElemento'
+      LookupDataSet = qryElemento
+      LookupKeyFields = 'Id'
+      LookupResultField = 'ELEMENTO'
+      KeyFields = 'ElementoId'
+      Size = 111
+      Lookup = True
+    end
+    object qryPersonagensTipoRaridade: TStringField
+      FieldKind = fkLookup
+      FieldName = 'TipoRaridade'
+      LookupDataSet = qryRaridade
+      LookupKeyFields = 'Id'
+      LookupResultField = 'Raridade'
+      KeyFields = 'RaridadeId'
+      Size = 111
+      Lookup = True
+    end
+  end
+  object qryElemento: TFDQuery
+    Active = True
+    Connection = conn
+    SQL.Strings = (
+      'SELECT * FROM ELEMENTO')
+    Left = 416
+    Top = 96
+    object qryElementoId: TFDAutoIncField
+      FieldName = 'Id'
+    end
+    object qryElementoELEMENTO: TStringField
+      FieldName = 'ELEMENTO'
+      Required = True
+      Size = 10
+    end
+  end
+  object QryGenero: TFDQuery
+    Active = True
+    Connection = conn
+    SQL.Strings = (
+      'Select * from Genero')
+    Left = 480
+    Top = 96
+    object QryGeneroId: TFDAutoIncField
+      FieldName = 'Id'
+      Origin = 'Id'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object QryGeneroName: TStringField
+      FieldName = 'Name'
+      Origin = 'Name'
+      Required = True
+    end
+  end
+  object qryRaridade: TFDQuery
+    Active = True
+    Connection = conn
+    SQL.Strings = (
+      'Select * from Raridade')
+    Left = 536
+    Top = 96
+    object qryRaridadeId: TFDAutoIncField
+      FieldName = 'Id'
+      Origin = 'Id'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object qryRaridadeRaridade: TStringField
+      FieldName = 'Raridade'
+      Origin = 'Raridade'
+      Required = True
+      Size = 10
+    end
+  end
+  object qryArma: TFDQuery
+    Active = True
+    Connection = conn
+    SQL.Strings = (
+      'Select * from arma')
+    Left = 592
+    Top = 96
+    object qryArmaId: TFDAutoIncField
+      FieldName = 'Id'
+      Origin = 'Id'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object qryArmaTipo: TStringField
+      FieldName = 'Tipo'
+      Origin = 'Tipo'
+      Required = True
+    end
+  end
+end

@@ -36,7 +36,6 @@ inherited frmCadPersonagens: TfrmCadPersonagens
       end>
   end
   inherited Panel1: TPanel
-    ExplicitTop = 82
     object Label1: TLabel
       Left = 40
       Top = 40
@@ -48,22 +47,22 @@ inherited frmCadPersonagens: TfrmCadPersonagens
     object Label2: TLabel
       Left = 40
       Top = 80
-      Width = 29
+      Width = 27
       Height = 13
-      Caption = 'NOME'
+      Caption = 'Nome'
       FocusControl = DBEdit2
     end
     object Label3: TLabel
       Left = 41
       Top = 117
-      Width = 65
+      Width = 44
       Height = 13
       Caption = 'Elemento'
     end
     object Label4: TLabel
       Left = 40
       Top = 160
-      Width = 66
+      Width = 43
       Height = 13
       Caption = 'Raridade'
       FocusControl = DBEdit4
